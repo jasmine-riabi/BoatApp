@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/menu_info" />
+        <item
+            android:id="@+id/nav_restaurant"
+            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:title="@string/menu_restaurant" />
+
+        <item
+            android:id="@+id/nav_shopping"
+            android:icon="@drawable/ic_baseline_shopping_basket_24"
+            android:title="@string/menu_shopping" />
+        <item
+            android:id="@+id/nav_escale"
+            android:icon="@drawable/ic_baseline_place_24"
+            android:title="@string/menu_escale" />
+        <item
+            android:id="@+id/nav_actualite"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="@string/menu_actualite" />
+    </group>
+</menu>
