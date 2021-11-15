@@ -15,3 +15,6 @@ Crée par Riabi Jasmine, Pettegola Loïs et Festoc Mylan.
 </p>
 
 A Basic UI in _Android_ with _kotlin_.
+
+Création d'un menu avec toutes les activitésà bord du bateau: Restaurants, Escales, Activités, Shopping, Infos et Actualités.
+Notre sujet est de créer la liste des escales de la croisière, donc créer une liste cliquable avec des images des villes où il y aurait une escales et lors du clique sur ces villes on renverrait un toast.
