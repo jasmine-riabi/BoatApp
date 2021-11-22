@@ -27,17 +27,17 @@
         android:id="@+id/nav_shopping"
         android:name="com.example.boatapp.ui.shopping.ShoppingFragment"
         android:label="@string/menu_shopping"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_shopping" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_escale"
-        android:name="com.example.boatapp.ui.escale.EscaleFragment"
+        android:name="com.example.boatapp.ui.escale.EscaleActivity"
         android:label="@string/menu_escale"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/activity_escale" />
 
     <fragment
         android:id="@+id/nav_actualite"
         android:name="com.example.boatapp.ui.actualite.ActualiteFragment"
         android:label="@string/menu_actualite"
-        tools:layout="@layout/fragment_restaurant" />
+        tools:layout="@layout/fragment_actualite" />
 </navigation>

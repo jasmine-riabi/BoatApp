@@ -1,44 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:layout_alignParentStart="true"
     android:layout_alignParentLeft="true">
 
-    <TextView
-        android:id="@+id/pays"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
-    <TextView
-        android:id="@+id/ville"
+        android:orientation="horizontal">
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
 
-
-    <TextView
-        android:id="@+id/datea"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/pays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
 
-    <TextView
-        android:id="@+id/dated"
+        <TextView
+            android:id="@+id/ville"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/datea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
 
+        <TextView
+            android:id="@+id/dated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center" />
 
-</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
