@@ -95,7 +95,7 @@ See naming convention of [Kotlin for Android project](https://gitlab.com/chillco
 
 ## License
 
-Distributed under the GNU General Public License v3.0. See [LICENSE](https://github.com/jasmine-riabi/BoatApp/blob/main/LICENSE) for more information (cf. [Choose an open source license](https://choosealicense.com/)).
+Distributed under the GNU General Public License v3.0. See [LICENSE](https://github.com/jasmine-riabi/BoatApp/blob/master/LICENSE) for more information (cf. [Choose an open source license](https://choosealicense.com/)).
 
 ## Related blog posts in FR
 
