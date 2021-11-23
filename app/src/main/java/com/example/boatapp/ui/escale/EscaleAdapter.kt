@@ -6,37 +6,35 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.boatapp.databinding.ItemAndVersionBinding
+import com.example.boatapp.ui.escale.CellClickListener
 
 
-class AndVersionAdapter(val items: Array<AndVersion>) : RecyclerView.Adapter<AndVersionAdapter.ViewHolder>() {
+class EscaleAdapter(val items: Array<Escale>, var listener : CellClickListener) : RecyclerView.Adapter<EscaleAdapter.ViewHolder>() {
 
 
     inner class ViewHolder(val binding: ItemAndVersionBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bindAndVersion(andVersion: AndVersion) {
-            with(andVersion) {
+        fun bindAndVersion(escale: Escale) {
+            with(escale) {
                 binding.image.setImageResource(image)
-                binding.pays.text = "$ville"
-                binding.ville.text = "$pays"
+                binding.pays.text =  "$pays"
+                binding.ville.text = "$ville"
                 binding.datea.text = "$dateA"
                 binding.dated.text = "$dateD"
             }
         }
-
-
     }
 
-    /* override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemAndVersionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding)
-    }*/
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AndVersionAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EscaleAdapter.ViewHolder {
         return ViewHolder(ItemAndVersionBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindAndVersion(items[position])
+        holder.itemView.setOnClickListener {
+            val data = items[position]
+            listener.onCellClickListener(data.ville)
+        }
     }
 
     override fun getItemCount(): Int = items.size

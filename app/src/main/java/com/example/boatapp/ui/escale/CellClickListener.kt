@@ -1,5 +1,5 @@
 package com.example.boatapp.ui.escale
 
 interface CellClickListener {
-    fun onCellClickListener(position: Int)
+    fun onCellClickListener(ville: String)
 }
