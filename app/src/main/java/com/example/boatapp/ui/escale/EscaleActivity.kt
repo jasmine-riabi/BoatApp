@@ -9,6 +9,7 @@ import com.example.escales.Escale
 import com.example.escales.EscaleAdapter
 import kotlinx.android.synthetic.main.activity_escale.*
 
+
 class EscaleActivity : AppCompatActivity(), CellClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
