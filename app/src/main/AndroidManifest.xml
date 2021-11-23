@@ -11,7 +11,8 @@
         android:theme="@style/Theme.BoatApp">
         <activity
             android:name=".ui.escale.EscaleActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Escales"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
