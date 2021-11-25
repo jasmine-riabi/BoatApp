@@ -40,7 +40,7 @@ Installer [Android Studio](https://developer.android.com/studio)
 ## Dependencies en plus
   * Recyclerview
 
-### Autres
+### Fonctionnalités utilisées
   * [View Binding, Part of Android Jetpack](https://developer.android.com/topic/libraries/view-binding)
   * [RecyclerView, Part of Android Jetpack](https://developer.android.com/jetpack/androidx/releases/recyclerview)
 
