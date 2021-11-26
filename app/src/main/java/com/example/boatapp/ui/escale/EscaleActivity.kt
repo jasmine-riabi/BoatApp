@@ -14,8 +14,8 @@ class EscaleActivity : AppCompatActivity(), CellClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_escale)
-        andVersionRecyclerView.layoutManager = LinearLayoutManager(this)
-        andVersionRecyclerView.adapter = EscaleAdapter(items, this)
+        EscaleRecyclerView.layoutManager = LinearLayoutManager(this)
+        EscaleRecyclerView.adapter = EscaleAdapter(items, this)
     }
 
     val items = arrayOf(
@@ -29,7 +29,7 @@ class EscaleActivity : AppCompatActivity(), CellClickListener {
     )
 
     override fun onResume() {
-        andVersionRecyclerView.adapter?.notifyDataSetChanged()
+        EscaleRecyclerView.adapter?.notifyDataSetChanged()
         super.onResume()
     }
 
