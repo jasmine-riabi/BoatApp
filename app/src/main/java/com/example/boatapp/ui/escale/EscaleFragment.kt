@@ -1,22 +1,27 @@
 package com.example.boatapp.ui.escale
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.boatapp.R
 import com.example.escales.Escale
 import com.example.escales.EscaleAdapter
-import kotlinx.android.synthetic.main.activity_escale.*
+import kotlinx.android.synthetic.main.fragment_escale.*
 
 
-class EscaleActivity : AppCompatActivity(), CellClickListener {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_escale)
-        EscaleRecyclerView.layoutManager = LinearLayoutManager(this)
-        EscaleRecyclerView.adapter = EscaleAdapter(items, this)
+class EscaleFragment : Fragment(), CellClickListener {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_escale, container, false)
     }
+
 
     val items = arrayOf(
         Escale(R.drawable.nice,"France","Nice","23/09/2021","24/09/2021"),
@@ -28,13 +33,21 @@ class EscaleActivity : AppCompatActivity(), CellClickListener {
         Escale(R.drawable.marseille,"France","Marseille","23/10/2021","24/10/2021")
     )
 
+    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(itemView, savedInstanceState)
+        EscaleRecyclerView.apply {
+            layoutManager = LinearLayoutManager(activity)
+            adapter = EscaleAdapter(items, this@EscaleFragment);
+        }
+    }
+
     override fun onResume() {
         EscaleRecyclerView.adapter?.notifyDataSetChanged()
         super.onResume()
     }
 
     override fun onCellClickListener(ville: String) {
-        Toast.makeText(this, "Escale : $ville", Toast.LENGTH_SHORT).show()
+        Toast.makeText(activity, "Escale : $ville", Toast.LENGTH_SHORT).show()
     }
 
 }

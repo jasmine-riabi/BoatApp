@@ -29,11 +29,11 @@
         android:label="@string/menu_shopping"
         tools:layout="@layout/fragment_shopping" />
 
-    <activity
+    <fragment
         android:id="@+id/nav_escale"
-        android:name="com.example.boatapp.ui.escale.EscaleActivity"
+        android:name="com.example.boatapp.ui.escale.EscaleFragment"
         android:label="@string/menu_escale"
-        tools:layout="@layout/activity_escale" />
+        tools:layout="@layout/fragment_escale" />
 
     <fragment
         android:id="@+id/nav_actualite"
